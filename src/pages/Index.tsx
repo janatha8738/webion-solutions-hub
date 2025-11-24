@@ -55,9 +55,8 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background opacity-50" />
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-background via-gradient-via to-gradient-to">
+        <div className="absolute inset-0 grid-pattern opacity-30" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
@@ -84,7 +83,7 @@ const Index = () => {
       </section>
 
       {/* Technical Services */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
@@ -142,9 +141,8 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 gradient-tech opacity-20" />
-        <div className="absolute inset-0 grid-pattern opacity-10" />
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
+        <div className="absolute inset-0 grid-pattern opacity-40" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">

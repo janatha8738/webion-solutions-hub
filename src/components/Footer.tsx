@@ -4,7 +4,7 @@ import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-gradient-to-b from-secondary to-background border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
