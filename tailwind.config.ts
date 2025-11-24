@@ -63,8 +63,8 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Rajdhani', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Manrope', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
