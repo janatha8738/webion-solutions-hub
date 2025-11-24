@@ -8,50 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 220 20% 15%;
+    /* Dark theme variables */
+    --background: 220 10% 6%;
+    --foreground: 220 10% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card: 220 10% 8%;
+    --card-foreground: 220 10% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 220 10% 8%;
+    --popover-foreground: 220 10% 96%;
 
-    --primary: 200 95% 45%;
+    --primary: 187 95% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 220 20% 15%;
+    --secondary: 210 8% 14%;
+    --secondary-foreground: 220 10% 86%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 220 15% 40%;
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 187 85% 50%;
+    --accent: 185 95% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 200 95% 45%;
+    --border: 220 10% 14%;
+    --input: 220 10% 14%;
+    --ring: 185 95% 55%;
 
     --radius: 0.5rem;
 
-    --tech-glow: 200 95% 55%;
-    --tech-grid: 210 30% 92%;
-    --gradient-from: 210 100% 97%;
-    --gradient-via: 200 100% 95%;
-    --gradient-to: 187 100% 92%;
+    --tech-glow: 185 95% 60%;
+    --tech-grid: 220 10% 12%;
+    --gradient-from: 235 80% 6%;
+    --gradient-via: 210 80% 8%;
+    --gradient-to: 187 85% 10%;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 15%;
-    --sidebar-primary: 200 95% 45%;
+    --sidebar-background: 220 10% 8%;
+    --sidebar-foreground: 220 10% 96%;
+    --sidebar-primary: 187 95% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 220 20% 15%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 200 95% 45%;
+    --sidebar-accent: 210 8% 14%;
+    --sidebar-accent-foreground: 220 10% 86%;
+    --sidebar-border: 220 10% 14%;
+    --sidebar-ring: 185 95% 55%;
   }
 }
 
