@@ -8,12 +8,11 @@ import Particles from "@/components/ui/Particles/Particles";
 
 const Index = () => {
   const technicalServices = [
-    { icon: Database, title: "Data Engineering", description: "Build robust data pipelines and architectures" },
-    { icon: Cloud, title: "Cloud Services", description: "Scalable cloud infrastructure and migration" },
-    { icon: Brain, title: "AI & ML", description: "Intelligent solutions powered by machine learning" },
     { icon: Code, title: "Web Development", description: "Modern, responsive web applications" },
     { icon: Smartphone, title: "Mobile Development", description: "Native and cross-platform mobile apps" },
-    { icon: Settings, title: "Managed Services", description: "24/7 support and infrastructure management" },
+    { icon: Settings, title: "ERP Systems", description: "Enterprise resource planning solutions" },
+    { icon: Database, title: "POS Systems", description: "Point of sale and retail management systems" },
+    { icon: Cloud, title: "Software Systems", description: "Custom software solutions for your business" },
   ];
 
   const industries = [
