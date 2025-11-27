@@ -50,7 +50,7 @@ const Index = () => {
               <span className="text-primary text-glow">Modern Business</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80">
-              Transform your business with cutting-edge data engineering, cloud services, AI/ML, and custom software development
+             Delivering modern web development, mobile applications, ERP and POS systems, and custom software solutions that elevate your business performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="tech-glow-strong font-heading text-lg" asChild>
