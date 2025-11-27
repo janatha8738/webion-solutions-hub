@@ -1,90 +1,17 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Code,
-  Smartphone,
-  Settings,
-  Database,
-  Cloud,
-  CheckCircle2,
   Users,
   Zap,
-  Shield
+  Shield,
+  CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Services = () => {
-  const services = [
-    {
-      icon: Code,
-      title: "Web Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies",
-      features: [
-        "Responsive & Mobile-First Design",
-        "Progressive Web Apps (PWA)",
-        "E-commerce Solutions",
-        "Content Management Systems",
-        "API Integration & Development",
-        "Performance Optimization"
-      ]
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      features: [
-        "iOS & Android Native Apps",
-        "Cross-Platform Development",
-        "App Store Deployment",
-        "Push Notifications",
-        "Offline Functionality",
-        "Real-time Data Sync"
-      ]
-    },
-    {
-      icon: Settings,
-      title: "ERP Systems",
-      description: "Enterprise resource planning solutions to streamline your operations",
-      features: [
-        "Custom ERP Development",
-        "Resource Management",
-        "Financial Management",
-        "Supply Chain Integration",
-        "Reporting & Analytics",
-        "Multi-Location Support"
-      ]
-    },
-    {
-      icon: Database,
-      title: "POS Systems",
-      description: "Point of sale and retail management systems for modern businesses",
-      features: [
-        "Sales Management",
-        "Inventory Tracking",
-        "Customer Management",
-        "Payment Integration",
-        "Real-time Reporting",
-        "Multi-Store Support"
-      ]
-    },
-    {
-      icon: Cloud,
-      title: "Software Systems",
-      description: "Custom software solutions tailored to your business needs",
-      features: [
-        "Process Automation",
-        "Workflow Management",
-        "Data Analytics",
-        "Integration Solutions",
-        "Cloud-Based Systems",
-        "Legacy System Migration"
-      ]
-    }
-  ];
-
   const process = [
     {
       step: "01",
@@ -154,39 +81,172 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Industry Solutions */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-lg transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                      <service.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-2xl mb-2">{service.title}</CardTitle>
-                      <p className="text-muted-foreground">{service.description}</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Tailored technology solutions for your industry
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Retail & E-commerce
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Complete POS systems, inventory management, and online storefronts to streamline your retail operations.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">POS Systems</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">E-commerce</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Inventory</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Manufacturing
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  ERP systems for production planning, supply chain management, and quality control automation.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">ERP</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Supply Chain</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Automation</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Healthcare
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Patient management systems, appointment scheduling, and HIPAA-compliant mobile applications.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Healthcare IT</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Mobile Apps</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Security</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Financial Services
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Secure banking applications, payment gateways, and financial management platforms.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Fintech</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Payments</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Security</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Education
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Learning management systems, student portals, and interactive educational mobile apps.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">LMS</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">E-learning</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Mobile</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="pt-6">
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  Logistics
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Fleet management, route optimization, and real-time tracking systems for logistics operations.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Tracking</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Fleet</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">Optimization</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Technology Expertise
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              We use modern, proven technologies to build robust solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="font-heading text-2xl font-semibold mb-6 text-center">
+                Frontend
+              </h3>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">React</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Vue.js</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Angular</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">TypeScript</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Next.js</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading text-2xl font-semibold mb-6 text-center">
+                Backend
+              </h3>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Node.js</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Python</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">.NET</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Java</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">PHP</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-heading text-2xl font-semibold mb-6 text-center">
+                Mobile
+              </h3>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">React Native</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Flutter</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Swift</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Kotlin</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">iOS</span>
+                <span className="px-4 py-2 bg-card border rounded-lg text-sm font-medium">Android</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
