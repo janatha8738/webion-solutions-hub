@@ -1,166 +1,189 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Database,
-  Cloud,
-  Brain,
   Code,
   Smartphone,
   Settings,
-  ChevronDown
+  Database,
+  Cloud,
+  CheckCircle2,
+  Users,
+  Zap,
+  Shield
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Particles from "@/components/ui/Particles/Particles";
 
-const Index = () => {
-  const [openService, setOpenService] = useState(null);
-
-  const technicalServices = [
+const Services = () => {
+  const services = [
     {
       icon: Code,
       title: "Web Development",
-      description: "Modern, responsive web applications",
-      brief: "We create scalable, high-performance websites and web apps with modern frameworks, focusing on responsive design, fast load times, and seamless user experience."
+      description: "Modern, responsive web applications built with cutting-edge technologies",
+      features: [
+        "Responsive & Mobile-First Design",
+        "Progressive Web Apps (PWA)",
+        "E-commerce Solutions",
+        "Content Management Systems",
+        "API Integration & Development",
+        "Performance Optimization"
+      ]
     },
     {
       icon: Smartphone,
       title: "Mobile Development",
-      description: "Native and cross-platform mobile apps",
-      brief: "Developing high-quality mobile applications for iOS, Android, and cross-platform solutions with attention to user experience and performance."
+      description: "Native and cross-platform mobile applications for iOS and Android",
+      features: [
+        "iOS & Android Native Apps",
+        "Cross-Platform Development",
+        "App Store Deployment",
+        "Push Notifications",
+        "Offline Functionality",
+        "Real-time Data Sync"
+      ]
     },
     {
       icon: Settings,
       title: "ERP Systems",
-      description: "Enterprise resource planning solutions",
-      brief: "Custom ERP solutions to streamline business processes, improve resource management, and increase operational efficiency."
+      description: "Enterprise resource planning solutions to streamline your operations",
+      features: [
+        "Custom ERP Development",
+        "Resource Management",
+        "Financial Management",
+        "Supply Chain Integration",
+        "Reporting & Analytics",
+        "Multi-Location Support"
+      ]
     },
     {
       icon: Database,
       title: "POS Systems",
-      description: "Point of sale and retail management systems",
-      brief: "Robust POS systems to manage sales, inventory, and customer interactions with real-time reporting and analytics."
+      description: "Point of sale and retail management systems for modern businesses",
+      features: [
+        "Sales Management",
+        "Inventory Tracking",
+        "Customer Management",
+        "Payment Integration",
+        "Real-time Reporting",
+        "Multi-Store Support"
+      ]
     },
     {
       icon: Cloud,
       title: "Software Systems",
-      description: "Custom software solutions for your business",
-      brief: "Tailored software applications designed to automate workflows, enhance productivity, and solve specific business challenges."
-    },
-    {
-      icon: Brain,
-      title: "AI / ML Services",
-      description: "Intelligent automation & machine learning solutions",
-      brief: "Implement AI-driven solutions and machine learning models to automate tasks, generate insights, and enhance decision-making."
+      description: "Custom software solutions tailored to your business needs",
+      features: [
+        "Process Automation",
+        "Workflow Management",
+        "Data Analytics",
+        "Integration Solutions",
+        "Cloud-Based Systems",
+        "Legacy System Migration"
+      ]
     }
   ];
 
-  const industries = [
-    "Supply Chain & Logistics",
-    "E-commerce",
-    "Financial Services",
-    "Education",
-    "Healthcare",
-    "Real Estate",
-    "Manufacturing",
-    "Telecommunications"
+  const process = [
+    {
+      step: "01",
+      title: "Discovery & Planning",
+      description: "We analyze your requirements and create a detailed project roadmap"
+    },
+    {
+      step: "02",
+      title: "Design & Prototyping",
+      description: "Creating wireframes and prototypes to visualize the solution"
+    },
+    {
+      step: "03",
+      title: "Development",
+      description: "Building your solution with best practices and modern technologies"
+    },
+    {
+      step: "04",
+      title: "Testing & QA",
+      description: "Rigorous testing to ensure quality and performance"
+    },
+    {
+      step: "05",
+      title: "Deployment & Support",
+      description: "Launching your solution and providing ongoing maintenance"
+    }
   ];
 
-  const toggleService = (index) => {
-    setOpenService(openService === index ? null : index);
-  };
+  const whyChooseUs = [
+    {
+      icon: Users,
+      title: "Expert Team",
+      description: "Experienced developers and designers dedicated to your success"
+    },
+    {
+      icon: Zap,
+      title: "Fast Delivery",
+      description: "Agile methodology for rapid development and iteration"
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "Comprehensive testing and quality control processes"
+    },
+    {
+      icon: CheckCircle2,
+      title: "Proven Track Record",
+      description: "Successfully delivered projects across multiple industries"
+    }
+  ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <Particles
-        className="fixed inset-0 -z-10"
-        particleCount={200}
-        particleSpread={10}
-        speed={0.1}
-        particleColors={["#ffffff", "#ffffff", "#ffffff"]}
-        moveParticlesOnHover={true}
-        particleHoverFactor={1}
-      />
-
+    <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="font-heading text-5xl md:text-7xl font-bold leading-tight text-white">
-              Advanced Technology Solutions for{" "}
-              <span className="text-primary text-glow">Modern Business</span>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+            <h1 className="font-heading text-5xl md:text-6xl font-bold text-foreground">
+              Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-white/80">
-              Transform your business with cutting-edge web development, mobile
-              applications, ERP systems, POS platforms, and custom software
-              solutions.
+            <p className="text-xl text-muted-foreground">
+              Comprehensive technology solutions to drive your business forward
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="tech-glow-strong font-heading text-lg" asChild>
-                <Link to="/contact">
-                  Get Started <ArrowRight className="ml-2" size={20} />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="font-heading text-lg backdrop-blur-md border-white/30 text-white"
-                asChild
-              >
-                <Link to="/services">Explore Services</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* TECHNICAL SERVICES WITH CLICK EXPAND */}
-      <section className="py-20 relative">
+      {/* Services Grid */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
-              Technical Expertise
-            </h2>
-            <p className="text-xl text-white/80">
-              Comprehensive technology services to power your digital transformation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technicalServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <Card
                 key={index}
-                onClick={() => toggleService(index)}
-                className="bg-white/5 backdrop-blur-md border border-white/20 hover:border-primary transition-all duration-300 group hover:tech-glow animate-fade-in cursor-pointer"
+                className="group hover:shadow-lg transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-6 text-white">
-                  <div className="flex justify-between items-center">
-                    <service.icon className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                    <ChevronDown
-                      className={`transition-transform ${openService === index ? "rotate-180" : ""}`}
-                    />
-                  </div>
-
-                  <h3 className="font-heading text-2xl font-semibold mb-2">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-white/80 mb-4">{service.description}</p>
-
-                  {/* EXPANDING BRIEF DESCRIPTION */}
-                  {openService === index && (
-                    <div className="mt-4 border-t border-white/20 pt-4 animate-fade-in">
-                      <p className="text-white/70 text-base">
-                        {service.brief}
-                      </p>
+                <CardHeader>
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="w-8 h-8 text-primary" />
                     </div>
-                  )}
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">{service.title}</CardTitle>
+                      <p className="text-muted-foreground">{service.description}</p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -168,43 +191,87 @@ const Index = () => {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
-      <section className="py-20 relative">
+      {/* Our Process */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
-              Domain Expertise
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Our Process
             </h2>
-            <p className="text-xl text-white/80">
-              Industry-specific solutions tailored to your sector
+            <p className="text-xl text-muted-foreground">
+              A proven approach to deliver exceptional results
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {process.map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-white/5 backdrop-blur-md border border-white/20 rounded-lg text-center hover:border-primary hover:tech-glow transition-all duration-300 cursor-pointer animate-fade-in text-white"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className="relative p-6 bg-card rounded-lg border hover:border-primary transition-colors animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <p className="font-heading text-lg font-medium">{industry}</p>
+                <div className="text-5xl font-bold text-primary/20 mb-4">
+                  {item.step}
+                </div>
+                <h3 className="font-heading text-xl font-semibold mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white">
-              Ready to Transform Your Business?
+      {/* Why Choose Us */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+              Why Choose Us
             </h2>
-            <p className="text-xl text-white/80">
-              Let's discuss how we can help you leverage technology to achieve your goals
+            <p className="text-xl text-muted-foreground">
+              What sets us apart from the rest
             </p>
-            <Button size="lg" className="tech-glow-strong font-heading text-lg" asChild>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((item, index) => (
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="pt-8 pb-6">
+                  <div className="inline-flex p-4 rounded-full bg-primary/10 mb-4">
+                    <item.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Let's discuss your project and turn your vision into reality
+            </p>
+            <Button size="lg" className="font-heading text-lg" asChild>
               <Link to="/contact">
                 Contact Us Today <ArrowRight className="ml-2" size={20} />
               </Link>
@@ -218,4 +285,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Services;
