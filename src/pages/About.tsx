@@ -53,29 +53,52 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
+      {/* Vision & Mission */}
       <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="space-y-6 animate-fade-in">
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary text-glow">
+                Our Vision
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To be the leading technology partner that empowers businesses to thrive in the digital age through 
+                innovative software solutions, transforming ideas into reality and driving sustainable growth.
+              </p>
+            </div>
+            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary text-glow">
+                Our Mission
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To deliver exceptional web, mobile, and enterprise software solutions that solve real business challenges. 
+                We are committed to understanding our clients' unique needs and providing tailored technology solutions 
+                that drive efficiency, innovation, and competitive advantage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="font-heading text-4xl font-bold text-center mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                Webion Solutions was founded with a clear vision: to bridge the gap between business 
-                needs and technological possibilities. In today's rapidly evolving digital landscape, 
-                we recognized that businesses need more than just technical expertise—they need a 
-                partner who understands their industry, challenges, and goals.
+                Founded with a vision to transform how businesses leverage technology, Webion Solutions has grown 
+                from a small team of passionate developers into a comprehensive technology partner trusted by 
+                organizations across multiple industries.
               </p>
               <p>
-                Our team brings together decades of combined experience across diverse domains, from 
-                data engineering and cloud architecture to artificial intelligence and custom software 
-                development. We've worked with startups, enterprises, and everything in between, helping 
-                them leverage technology to achieve their strategic objectives.
+                Our journey began with a simple belief: technology should empower businesses, not complicate them. 
+                This philosophy guides everything we do, from the solutions we architect to the partnerships we build.
               </p>
               <p>
-                What sets us apart is our commitment to understanding your unique business context. 
-                We don't believe in one-size-fits-all solutions. Instead, we take the time to deeply 
-                understand your challenges, opportunities, and constraints before crafting solutions 
-                that are perfectly tailored to your needs.
+                Today, we specialize in web development, mobile applications, ERP systems, POS systems, and custom 
+                software solutions to help our clients navigate the complexities of digital transformation and 
+                achieve measurable business outcomes.
               </p>
             </div>
           </div>
@@ -135,14 +158,14 @@ const About = () => {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
               {[
-                "Data Engineering & Analytics",
-                "Cloud Architecture & Migration",
-                "Artificial Intelligence & ML",
-                "Full-Stack Development",
+                "Web Development",
                 "Mobile App Development",
-                "DevOps & Infrastructure",
-                "Cybersecurity",
-                "Digital Transformation",
+                "ERP Systems",
+                "POS Systems",
+                "Custom Software Solutions",
+                "UI/UX Design",
+                "E-commerce Solutions",
+                "System Integration",
                 "Technical Consulting"
               ].map((item, index) => (
                 <div 

@@ -8,19 +8,17 @@ import Particles from "@/components/ui/Particles/Particles";
 
 const Services = () => {
   const technicalServices = [
-    { icon: Database, title: "Data Engineering", description: "Build robust data pipelines and architectures", features: ["ETL", "Data Warehousing", "Real-time", "Lakehouse"] },
-    { icon: BarChart3, title: "Data Analytics", description: "Turn data into actionable insights", features: ["BI Dashboards", "Predictive", "Visualization", "Reporting"] },
-    { icon: Cloud, title: "Cloud Services", description: "Scalable cloud infrastructure and migration", features: ["AWS/Azure/GCP", "IaC", "Migration", "Cost Optimization"] },
-    { icon: Brain, title: "AI & ML", description: "Intelligent solutions powered by machine learning", features: ["LLMs", "Computer Vision", "NLP", "MLOps"] },
-    { icon: Code, title: "Web Development", description: "Modern, responsive web applications", features: ["Next.js", "React", "TypeScript", "PWA"] },
+    { icon: Code, title: "Web Development", description: "Modern, responsive web applications", features: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
     { icon: Smartphone, title: "Mobile Development", description: "Native and cross-platform mobile apps", features: ["iOS", "Android", "React Native", "Flutter"] },
-    { icon: Settings, title: "Managed Services", description: "24/7 support and infrastructure management", features: ["Monitoring", "DevOps", "Security", "SLA"] },
+    { icon: Settings, title: "ERP Systems", description: "Enterprise resource planning solutions", features: ["Inventory", "Finance", "HR", "CRM"] },
+    { icon: Database, title: "POS Systems", description: "Point of sale and retail management systems", features: ["Sales", "Inventory", "Reports", "Payment"] },
+    { icon: Cloud, title: "Software Systems", description: "Custom software solutions for your business", features: ["Custom Dev", "Integration", "Maintenance", "Support"] },
   ];
 
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* FULL PARTICLES BACKGROUND */}
-      <Particles hue={240} hoverIntensity={0.3} className="fixed inset-0 -z-10" />
+      <Particles className="fixed inset-0 -z-10" particleCount={150} speed={0.1} />
 
       <Navigation />
 
