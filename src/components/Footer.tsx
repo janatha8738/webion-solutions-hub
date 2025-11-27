@@ -35,22 +35,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Data Engineering
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Cloud Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  AI & ML
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Mobile Apps
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  ERP Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  POS Systems
                 </Link>
               </li>
             </ul>
