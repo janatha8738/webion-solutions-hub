@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Webion Solutions" className="h-12 w-12 rounded-full shadow-lg" />
+            <img src={logo} alt="Webion Solutions" className="h-20 w-20 rounded-full shadow-lg" />
             <span className="font-heading text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               WEBION SOLUTIONS
             </span>
