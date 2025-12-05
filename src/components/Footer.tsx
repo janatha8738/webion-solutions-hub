@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Webion Solutions" className="h-10 w-10 rounded-full" />
+              <img src={logo} alt="Webion Solutions" className="h-30 w-30 rounded-full" />
               <span className="font-heading text-xl font-bold">WEBION SOLUTIONS</span>
             </div>
             <p className="text-muted-foreground text-sm">
